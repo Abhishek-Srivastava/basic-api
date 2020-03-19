@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: name-virtual-host-ingress
+  annotations:
+    kubernetes.io/ingress.class: traefik
+spec:
+  rules:
+  - host: k3scluster
+    http:
+      paths:
+      - backend:
+          serviceName: basic-api
+          servicePort: 5556
+        path: /status

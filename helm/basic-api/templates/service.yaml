@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: basic-api
+  labels:
+    app: basic-api
+    chart: basic-api-v0.0.1
+    release: basic-api
+    heritage: Tiller
+spec:
+  ports:
+    - port: 5556
+      targetPort: 5556
+      protocol: TCP
+      name: http
+  selector:
+    app: basic-api
+    release: basic-api

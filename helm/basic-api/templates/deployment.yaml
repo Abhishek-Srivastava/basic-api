@@ -1,0 +1,36 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: basic-api
+  labels:
+    app: basic-api
+    chart: basic-api-v0.9.34
+    release: basic-api
+    heritage: Tiller
+spec:
+  selector:
+    matchLabels:
+      app: basic-api
+      release: basic-api
+  template:
+    metadata:
+      labels:
+        app: basic-api
+        release: basic-api
+    spec:
+      containers:
+        - name: basic-api
+          image: "beelzebubabhi/meabhishek:basicapi"
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 5556
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 25m
+              memory: 64Mi
+            requests:
+              cpu: 25m
+              memory: 32Mi
