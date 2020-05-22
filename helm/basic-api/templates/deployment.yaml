@@ -8,6 +8,8 @@ metadata:
     chart: basic-api-0.0.1
     release: basic-api
     heritage: Tiller
+  annotations:
+    fluxcd.io/automated: 'true'
 spec:
   selector:
     matchLabels:
