@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: basic-api
-        image: "beelzebubabhi/basic-api:v0.0.1"
+        image: "beelzebubabhi/basic-api:v0.0.2"
         imagePullPolicy: Always
         ports:
         - name: http
