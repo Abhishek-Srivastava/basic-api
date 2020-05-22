@@ -18,7 +18,7 @@ func main() {
 	router.GET("/status",
 		func(c *gin.Context) {
 			status := serverStatus{
-				Service: "Hello, from MLOps",
+				Service: "Hello, from MLOps!!! This is in container v0.0.2",
 			}
 			c.JSON(http.StatusOK, status)
 		})
