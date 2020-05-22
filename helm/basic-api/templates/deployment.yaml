@@ -8,6 +8,8 @@ metadata:
     chart: basic-api-v0.0.1
     release: basic-api
     heritage: Tiller
+  annotations:
+    fluxcd.io/automated: 'true'
 spec:
   selector:
     matchLabels:
@@ -20,17 +22,17 @@ spec:
         release: basic-api
     spec:
       containers:
-        - name: basic-api
-          image: "beelzebubabhi/basic-api:v0.0.1"
-          imagePullPolicy: Always
-          ports:
-            - name: http
-              containerPort: 5556
-              protocol: TCP
-          resources:
-            limits:
-              cpu: 25m
-              memory: 64Mi
-            requests:
-              cpu: 25m
-              memory: 32Mi
+      - name: basic-api
+        image: "beelzebubabhi/basic-api:v0.0.1"
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 5556
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 25m
+            memory: 64Mi
+          requests:
+            cpu: 25m
+            memory: 32Mi
