@@ -1,7 +1,7 @@
 apiVersion: v1
 description: A helm chart for basic-api
 name: basic-api
-version: 0.0.1
+version: 0.0.2
 sources:
 - https://github.com/srivastava-abhishek/basic-api
 maintainers:
