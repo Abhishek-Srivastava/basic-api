@@ -1,14 +1,13 @@
 package main
 
 import (
-        "net/http"
+	"net/http"
 
-        "github.com/gin-gonic/gin"
-
+	"github.com/gin-gonic/gin"
 )
 
 type serverStatus struct {
-	Service  string `json:"service"`
+	Service string `json:"service"`
 }
 
 func main() {
@@ -17,11 +16,11 @@ func main() {
 
 	router.Use(gin.Logger())
 	router.GET("/status",
-	func(c *gin.Context) {
+		func(c *gin.Context) {
 			status := serverStatus{
-					Service: "OK",
+				Service: "Hello, from MLOps",
 			}
 			c.JSON(http.StatusOK, status)
-	})
+		})
 	router.Run(":" + "5556")
 }
