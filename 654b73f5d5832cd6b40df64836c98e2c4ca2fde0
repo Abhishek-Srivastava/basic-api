@@ -1,0 +1,1 @@
+{"jobID":"ec9fa8b5-fe3e-ad9d-dd21-20991a7444da","spec":{"type":"policy","cause":{"Message":"","User":"Abhishek Srivastava \u003csrivastava.abhishek@hpe.com\u003e"},"spec":{"default:deployment/basic-api":{"add":{"automated":"true"},"remove":{}}}},"result":null}
