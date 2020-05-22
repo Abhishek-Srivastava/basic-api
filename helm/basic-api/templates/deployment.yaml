@@ -5,7 +5,7 @@ metadata:
   name: basic-api
   labels:
     app: basic-api
-    chart: basic-api-v0.9.34
+    chart: basic-api-v0.0.1
     release: basic-api
     heritage: Tiller
 spec:
@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: basic-api
-          image: "beelzebubabhi/meabhishek:basicapi"
+          image: "beelzebubabhi/basic-api:v0.0.1"
           imagePullPolicy: Always
           ports:
             - name: http
