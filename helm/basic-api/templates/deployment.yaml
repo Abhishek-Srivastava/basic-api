@@ -5,7 +5,7 @@ metadata:
   name: basic-api
   labels:
     app: basic-api
-    chart: basic-api-0.0.2
+    chart: basic-api-0.0.3
     release: basic-api
     heritage: Tiller
   annotations:
