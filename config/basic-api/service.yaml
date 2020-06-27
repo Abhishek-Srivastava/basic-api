@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: basic-api
+  labels:
+    app: basic-api
+    release: basic-api
+spec:
+  type: NodePort
+  ports:
+    - port: 5556
+      nodePort: 30091
+      targetPort: 5556
+      protocol: TCP
+      name: http
+  selector:
+    app: basic-api
+    release: basic-api

@@ -1,0 +1,33 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: basic-api
+  labels:
+    app: basic-api
+spec:
+  selector:
+    matchLabels:
+      app: basic-api
+      release: basic-api
+  template:
+    metadata:
+      labels:
+        app: basic-api
+        release: basic-api
+    spec:
+      containers:
+      - name: basic-api
+        image: "beelzebubabhi/basic-api:v0.0.2"
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 5556
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 50m
+            memory: 32Mi
+          requests:
+            cpu: 50m
+            memory: 32Mi
